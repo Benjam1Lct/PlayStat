@@ -1,1 +1,2 @@
 # PlayStat
+The goal of this project is to program a functional Android and iOS app that can display the statistics of users from different musical streaming apps like Spotify, Deezer, Apple Music, and YouTube Music.
