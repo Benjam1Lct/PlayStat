@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "playstat" "\0"
+            VALUE "FileDescription", "lyra" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "playstat" "\0"
+            VALUE "InternalName", "lyra" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "playstat.exe" "\0"
-            VALUE "ProductName", "playstat" "\0"
+            VALUE "OriginalFilename", "lyra.exe" "\0"
+            VALUE "ProductName", "lyra" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

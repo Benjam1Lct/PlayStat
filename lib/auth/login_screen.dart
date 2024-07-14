@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lyra/pages/profil_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -21,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           child: Container(
             width: 428,
-            decoration: BoxDecoration(color: Colors.white),
+            decoration: const BoxDecoration(color: Colors.white),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,13 +33,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
+                      SizedBox(
                         width: double.infinity,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
+                            const SizedBox(
                               width: double.infinity,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -54,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       fontWeight: FontWeight.w700,
                                     ),
                                   ),
-                                  const SizedBox(height: 10),
+                                  SizedBox(height: 10),
                                   Text(
                                     'Choisissez votre service de streaming pour continuer',
                                     textAlign: TextAlign.center,
@@ -71,13 +72,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             const SizedBox(height: 60),
                             Column(
                               children: [
-                                loginButton(0, "Spotify", FontAwesomeIcons.spotify),
+                                loginButton(0, "Spotify", FontAwesomeIcons.spotify, ProfilScreen()),
                                 const SizedBox(height: 22),
-                                loginButton(1, "Deezer", FontAwesomeIcons.deezer),
+                                loginButton(1, "Deezer", FontAwesomeIcons.deezer, ProfilScreen()),
                                 const SizedBox(height: 22),
-                                loginButton(2, "Apple Music", FontAwesomeIcons.apple),
+                                loginButton(2, "Apple Music", FontAwesomeIcons.apple, ProfilScreen()),
                                 const SizedBox(height: 22),
-                                loginButton(3, "YouTube Music", FontAwesomeIcons.youtube),
+                                loginButton(3, "YouTube Music", FontAwesomeIcons.youtube, ProfilScreen()),
                               ],
                             ),
                           ],
@@ -94,28 +95,32 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget loginButton(int index, String serviceName, IconData iconData) {
+  Widget loginButton(int index, String serviceName, IconData iconData, redirection) {
     return GestureDetector(
       onTap: () {
         setState(() {
           _currentPressedIndex = index;
         });
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => redirection),
+        );
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         width: double.infinity,
         height: 72,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
-            side: BorderSide(width: 2),
+            side: const BorderSide(width: 2),
             borderRadius: BorderRadius.circular(8),
           ),
           shadows: _currentPressedIndex == index
               ? []
               : [
-                  BoxShadow(
+                  const BoxShadow(
                     color: Color(0xFF000000),
                     blurRadius: 0,
                     offset: Offset(4, 4),
@@ -126,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               'Login with ',
               style: TextStyle(
                 color: Colors.black,
@@ -141,7 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(width: 5),
                 Text(
                   serviceName,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 20,
                     fontFamily: 'Sulphur Point',

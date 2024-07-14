@@ -1,6 +1,6 @@
 {
-    "name": "playstat",
-    "short_name": "playstat",
+    "name": "lyra",
+    "short_name": "lyra",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
