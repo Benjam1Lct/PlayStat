@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lyra/bottom_navigation_bar.dart';
 
 class ProfilScreen extends StatelessWidget {
-  const ProfilScreen({Key? key}) : super(key: key);
+  const ProfilScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +12,16 @@ class ProfilScreen extends StatelessWidget {
           children: [
             Container(
               height: 200,
-              color: Colors.grey[300],
+              color: const Color.fromARGB(255, 255, 255, 255),
               child: Center(child: Text('Profile Header')),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 50,
-                    backgroundColor: Colors.grey[300],
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
                     child: Icon(Icons.person, size: 50),
                   ),
                   SizedBox(width: 20),
@@ -29,7 +29,7 @@ class ProfilScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'Benjamin Lecomte',
                           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                         ),
@@ -53,7 +53,7 @@ class ProfilScreen extends StatelessWidget {
                 ],
               ),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.music_note),
               title: Text('Spotify'),
               trailing: Icon(Icons.add),

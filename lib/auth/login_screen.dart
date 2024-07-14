@@ -72,13 +72,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             const SizedBox(height: 60),
                             Column(
                               children: [
-                                loginButton(0, "Spotify", FontAwesomeIcons.spotify, ProfilScreen()),
+                                loginButton(0, "Spotify", FontAwesomeIcons.spotify, const ProfilScreen()),
                                 const SizedBox(height: 22),
-                                loginButton(1, "Deezer", FontAwesomeIcons.deezer, ProfilScreen()),
+                                loginButton(1, "Deezer", FontAwesomeIcons.deezer, const ProfilScreen()),
                                 const SizedBox(height: 22),
-                                loginButton(2, "Apple Music", FontAwesomeIcons.apple, ProfilScreen()),
+                                loginButton(2, "Apple Music", FontAwesomeIcons.apple, const ProfilScreen()),
                                 const SizedBox(height: 22),
-                                loginButton(3, "YouTube Music", FontAwesomeIcons.youtube, ProfilScreen()),
+                                loginButton(3, "YouTube Music", FontAwesomeIcons.youtube, const ProfilScreen()),
                               ],
                             ),
                           ],
